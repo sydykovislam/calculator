@@ -1,0 +1,14 @@
+.Button {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background-color: lightgrey;
+  font-size: 23px;
+  font-weight: 400;
+  border: 1px solid black;
+}
+
+.operator {
+  background-color: orange;
+}

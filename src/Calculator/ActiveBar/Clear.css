@@ -1,0 +1,9 @@
+.Clear {
+  font-size: 25px;
+  background-color: lightgrey;
+  height: 100px;
+  width: 100%;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 100px;
+}

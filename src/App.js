@@ -1,25 +1,32 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Calculator from "./Calculator/Calculator";
 
 class App extends Component {
+  state = {
+    input: ""
+  };
+
+  addValue = val => {
+    this.setState({ input: this.state.input + val });
+  };
+
+  calc = () => {
+    this.setState({ input: eval(this.state.input) });
+  };
+  clear = () => {
+    this.setState({ input: "" });
+  };
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Calculator
+          addValue={this.addValue}
+          result={this.state.input}
+          calc={this.calc}
+          clear={this.clear}
+        />
       </div>
     );
   }

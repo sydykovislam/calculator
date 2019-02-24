@@ -1,0 +1,10 @@
+.ActiveBar {
+  display: flex;
+  /* width: 700px; */
+  justify-content: center;
+  flex-direction: column;
+}
+.ActiveBar .row {
+  display: flex;
+  width: 100%;
+}
