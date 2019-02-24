@@ -8,7 +8,7 @@ let isOperator = val => {
 function Button(props) {
   return (
     <div
-      className={`Button ${isOperator(props.children) ? null : "operator"} `}
+      className={`Button ${isOperator(props.children) ? "" : "operator"} `}
       onClick={() => props.addValue(props.children)}
     >
       {props.children}

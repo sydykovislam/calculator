@@ -12,7 +12,15 @@ class App extends Component {
   };
 
   calc = () => {
-    this.setState({ input: eval(this.state.input) });
+    let result = eval(this.state.input);
+    const remainder = result
+      .toString()
+      .split(".")
+      .pop().length;
+    if (remainder > 2) {
+      result = result.toFixed(2);
+    }
+    this.setState({ input: result });
   };
   clear = () => {
     this.setState({ input: "" });
